@@ -4,12 +4,12 @@ services:
 
   app_proxy:
     environment:
-      APP_HOST: gitlab_gitlab_1
+      APP_HOST: zero-coffee_gitlab_1
       APP_PORT: 8929
       PROXY_AUTH_ADD: "false"
 
   gitlab:
-    image: gitlab/gitlab-ce:17.3.7-ce.0
+    image: gitlab/gitlab-ce:17.6.0-ce.0
     restart: on-failure
     hostname: '${DEVICE_DOMAIN_NAME}:8929'
     ulimits:
